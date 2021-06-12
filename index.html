@@ -1,0 +1,41 @@
+<html>
+    <head>
+       <link rel="preconnect" href="https://fonts.gstatic.com">
+       <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+       <!--Bootstrap-->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <!--Webcame.js-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+    </head>
+    <body>
+        <center>
+      <span><h1 style="font-family: 'Amatic SC', cursive;">The Face recognizer</h1><button class="btn btn-primary glyphicon glyphicon-info-sign"onclick="Github()"></button></span>
+      <hr>
+      <h4 style="font-family: 'Amatic SC', cursive;">What I understand:</h4>
+      <b style="font-family: 'Amatic SC', cursive;">
+          If you have a beard
+          <hr>
+          If you are a little girl
+          <hr>
+          If you are a boy
+          <hr>
+          If you are wearing lipstick
+      </b>
+      <br>
+      <label>TRY IT OUT:</label>
+      <div id="camera"style="    border: 2px dashed black;
+      width: 350px;
+      height: 300px;">
+    </div>
+    <button class="btn btn-primary glyphicon glyphicon-camera"></button>
+     <div id="Stats">
+         <span>Object:<p id="ObjectName"></p></span>
+         <span>Object Accuracy:<p id="ObjectAccuracy"></p></span>
+     </div> 
+     </center>
+
+    </body>
+    <script src="main.js"></script>
+</html>
