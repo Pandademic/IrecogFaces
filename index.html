@@ -1,66 +1,48 @@
 <html>
-  <head>
-    <title>Image recognition</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
-    
-<script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <head>
+       <link rel="preconnect" href="https://fonts.gstatic.com">
+       <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+       <!--Bootstrap-->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <!--Webcame.js-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+      <!--ML5-->
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
 
-
-   <link rel="stylesheet" href="style.css">
-  
-  </head>
-
-  <body>
-  <div class="container">
-    
-    <center>
-      <h3 class="btn btn-primary heading">IMAGE RECOGNITION</h3>
-      <br>
-      <br>
-
-      <p style="font-size: 22px;">Model is trained to identify the following objects: </p>
-      <b class="name_Of_Objects">
-        Ipad
-        <hr>
-        Paper
-        <hr>
-        Human
-        <hr>
-        Pillow
-        <hr>
+    </head>
+    <body>
+        <center>
+      <span><h1 style="font-family: 'Amatic SC', cursive;">The Face recognizer</h1><button class="btn btn-primary glyphicon glyphicon-info-sign"onclick="Github()"></button></span>
+      <hr>
+      <h4 style="font-family: 'Amatic SC', cursive;">What I understand:</h4>
+      <b style="font-family: 'Amatic SC', cursive;">
+          If you have a beard
+          <hr>
+          If you are a little girl
+          <hr>
+          If you are a boy
+          <hr>
+          If you are wearing lipstick
       </b>
-      <label>Webcam View - </label>
-      <div id="camera"> 
-      </div>
       <br>
-      <br>
-      <div id="result">
-      
-      </div>
-      <br>
-      <br>
-     <button onclick="take_snapshot()"class="btn btn-info">Capture image</button>
-      <br>
-      <br>
-      <button onclick="check()" class="btn btn-success">Indentify image</button>
+      <label>TRY IT OUT:</label>
+      <div id="camera"style="    border: 2px dashed black;
+      width: 350px;
+      height: 300px;">
+    </div>
+    <label>RESULT:</label>
+    <div id="result"></div>
+    <button class="btn btn-primary glyphicon glyphicon-camera"onclick="take_snapshot()"></button>
+    <button class="btn btn-danger glyphicon glyphicon-check"onclick="check()"></button>
+     <div id="Stats">
+         <span>Object:<p id="ObjectName"></p></span>
+         <span>Object Accuracy:<p id="ObjectAccuracy"></p></span>
+     </div> 
+     </center>
 
-      <br><br>
+    </body>
+    <script src="main.js"></script>
 
-      <br><br>
-
-      <p style="font-size: 22px;">Object :<span id="result_object_name"></span>   </p>
-      <p style="font-size: 22px;">Accuracy :<span id="result_object_accuracy"></span>  </p>
-    </center>
-
-  </div>
-<script src="main.js"></script>
-  </body>
 </html>
-
- 
